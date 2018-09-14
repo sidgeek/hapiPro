@@ -1,5 +1,8 @@
 // config/index.js
+require('env2')('./.env')
+const { env } = process;
+
 module.exports = {
-	host: '127.0.0.1',
-	port: 9000,
+  host: env.HOST,
+  port: env.PORT,  
 }

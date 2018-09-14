@@ -3,6 +3,7 @@ const Hapi = require('hapi');
 const config = require('./config');
 const routesHelloHapi = require('./routes/hello-hapi');
 
+
 const server = new Hapi.Server();
 // 配置服务器启动 host 与端口
 server.connection({

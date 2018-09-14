@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sidgeek/hapiPro#readme",
   "dependencies": {
+    "env2": "^2.2.2",
     "hapi": "^16.6.3"
   }
 }
