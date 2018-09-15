@@ -2,7 +2,7 @@
 const Joi = require('joi');
 const GROUP_NAME = 'shops';
 const models = require("../models");
-const { paginationDefine } = require('../utils/router-helper');
+const { paginationDefine, jwtHeaderDefine } = require('../utils/router-helper');
 
 module.exports = [
   {
@@ -23,12 +23,13 @@ module.exports = [
     },
     config: {
       tags: ['api', GROUP_NAME],
-      auth: false,
+      // auth: false,
       description: '获取店铺列表',
       validate: {
         query: {
             ...paginationDefine,
         },
+        ...jwtHeaderDefine,
       },
     },
   },
