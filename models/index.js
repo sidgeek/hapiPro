@@ -8,7 +8,14 @@ const env = process.env.NODE_ENV || 'development';
 // const config = require(__dirname + '/../config/config.json')[env];
 const configs = require('../config/config.js');
 
-const config = configs[env];
+// const config = configs[env];
+const config = {
+  ...configs[env],
+  define: {
+    underscored: true,
+  },
+};
+
 const db = {};
 let sequelize = null;
 
